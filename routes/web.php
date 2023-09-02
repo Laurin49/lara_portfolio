@@ -16,7 +16,7 @@ Route::middleware(['auth'])->group(function() {
     })->name('dashboard');
 
     Route::resource('/skills', SkillController::class);
-    Route::resource('projects', ProjectController::class);
+    Route::resource('/projects', ProjectController::class);
 });
 
 

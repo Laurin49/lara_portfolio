@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply leading-6 bg-gray-200 font-body text-paragraph;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-slate-900 dark:text-white font-primary;
+    }
+
+    .section {
+        @apply py-12 lg:py-32;
+    }
+    .section-title {
+        @apply mb-5 text-3xl font-medium lg:text-4xl lg:font-extrabold;
+    }
+    .subtitle {
+        @apply text-base text-paragraph mb-16 lg:mb-24 max-w-[520px];
+    }
+    .btn {
+        @apply flex items-center justify-center px-6 py-4 font-medium transition-all rounded-sm text-slate-700 dark:text-white hover:text-white hover:bg-accent-hover bg-accent;
+    }
+    .btn-lg {
+        @apply h-[54px];
+    }
+    .btn-md {
+        @apply h-[48px];
+    }
+    .input {
+        @apply bg-light-secondary dark:bg-dark-secondary text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-lg focus:outline focus:outline-1 focus:outline-accent;
+    }
+    .textarea {
+        @apply bg-light-secondary dark:bg-dark-secondary resize-none w-full outline-none p-6 rounded-lg h-[200px] focus:outline focus:outline-1 focus:outline-accent;
+    }
+}
